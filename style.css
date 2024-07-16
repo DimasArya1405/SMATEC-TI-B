@@ -1,0 +1,437 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbara {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.navbara .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 10px 10px 20px black;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links a {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-shadow: 2px 2px 10px black;
+    color:white;
+    /* mix-blend-mode: difference; */
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff9036;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    text-shadow: 2px 2px 10px rgb(255, 255, 255);
+    color: #000000;
+    font-weight: 600;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.navbara .navbar-extra a{
+    color: black;
+    margin: 0 0.5rem;
+}
+
+.navbara .navbar-extra a:hover{
+color:blue;
+}
+
+#hamburger-menu{
+    display:none;
+}
+
+.content {
+    padding: 60px 20px; 
+}
+
+.about{
+    letter-spacing: 2px;
+    font-family: "Montserrat", sans-serif;
+    /* border-radius: 10px 10px 1px 1px; */
+    display: flex;
+    padding-left: 5rem;
+    align-items: center;
+    margin-top: 8rem;
+    height: 7rem;
+    background-image: url(img/bg-keyboard-1.jpg);
+    color:white;   
+    margin-bottom: 3rem;
+}
+
+ p{
+    font-weight: 300;
+}
+.row .col h3{
+    text-decoration: underline;
+}
+
+.images img{
+    border-radius: 20px;
+    width: 30rem;
+}
+
+.image img{
+    border-radius: 20px;
+}
+
+.achievment{
+    letter-spacing: 2px;
+    font-family: "Montserrat", sans-serif;
+    /* border-radius: 10px 10px 1px 1px; */
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+    height: 8rem;
+    background-image: url(img/bg-achievmentt.jpg);
+    color:white;   
+    margin-bottom: 3rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card {
+    position: relative;
+    overflow: hidden;
+}
+.card-img-left {
+    transition: transform 0.3s ease;
+}
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white !important;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+.card:hover .card-body {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.class{
+    /* border-radius: 10px 10px 1px 1px; */
+    letter-spacing: 2px;
+    display: flex;
+    padding-left: 5rem;
+    align-items: center;
+    margin-top: 8rem;
+    height: 7rem;
+    background-image: url(img/bg-class-structure-1.jpg);
+    color:white;   
+    margin-bottom: 3rem;
+    font-family: "Montserrat", sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.profile-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 200px; /* Set a max width for the profile card */
+}
+
+.profile-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    transition: transform 0.3s ease;
+}
+.profile-card:hover img {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+.profile-card .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+.profile-card:hover .info {
+    transform: translateY(0);
+}
+.profile-card .info h5, .profile-card .info p {
+    margin: 0;
+}
+.photo-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 133.33%; /* 3x4 ratio */
+    position: relative;
+}
+.photo-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#clst h2{
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-top: 1rem;
+}
+
+.text-center button {
+    background-color: #ffffff; /* Warna default */
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.gallery-oy{
+
+        /* border-radius: 10px 10px 1px 1px; */
+        letter-spacing: 2px;
+        display: flex;
+        padding-left: 5rem;
+        align-items: center;
+        margin-top: 8rem;
+        height: 7rem;
+        background-image: url(img/galery.jpg);
+        color:white;   
+        margin-bottom: 3rem;
+        font-family: "Montserrat", sans-serif;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+}
+
+.category:hover {
+    background-color: #0056b3;  
+     color:white;
+}
+
+/* Kelas aktif untuk tombol kategori */
+.category.active {
+    background-color: #0056b3;
+    color:white;
+
+}
+
+.photo {
+    margin: 1rem 0;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.photo.show {
+    display: block;
+    opacity: 1;
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+
+
+
+
+/* QUERY */
+
+
+@media (max-width: 1250px){
+    html{
+        font-size: 75%;
+    }
+    .images img{
+        width: 28rem;
+    }
+    .card{
+        width:20rem;
+    }
+}
+
+/* TABLET */
+@media (max-width: 768px){
+    html{
+        font-size: 62.5%;
+    }
+    #hamburger-menu{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .navbara .nav-links{
+        position:absolute;
+        display: block!important;
+        top:100%;
+        right: -100%;
+        background-color: white;
+        width:38rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+    .navbara .nav-links.active{
+        right: 0;
+    }
+    .navbara .nav-links a{
+        color: salmon;
+        display:block;
+        margin:1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+    .about{
+        padding:0 2rem;
+    }
+    .images img{
+        width:25rem;
+    }
+    .card{
+        width:22rem;
+    }
+    .col-md-4 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+    .gallery-item{
+        height:20rem
+    }
+
+}
+@media (min-width: 992px) {
+    .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+@media (min-width: 576px) {
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 55%;
+    }
+    .card{
+        width:18rem;
+    }
+}
